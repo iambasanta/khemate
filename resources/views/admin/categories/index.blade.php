@@ -55,7 +55,7 @@
                                 @endif
                             </td>
 
-                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $category->created_at }}</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $category->formatted_created_at }}</td>
 
                             <td class="flex space-x-6 px-3 py-4">
                                 <a href="{{ route('admin.categories.edit', $category) }}" class="inline-flex text-gray-600 hover:text-gray-800">
