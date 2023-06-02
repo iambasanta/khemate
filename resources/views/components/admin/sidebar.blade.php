@@ -51,6 +51,18 @@
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a href="{{ route('admin.products.index') }}"
+                                        class="{{ request()->routeIs('admin.products.index') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                        x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
+                                        <svg class="{{ request()->routeIs('admin.products.index') ? 'text-gray-800' : 'text-gray-400 ' }} h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.17 7.44 12 12.55l8.77-5.08M12 21.61v-9.07"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.93 2.48 4.59 5.44c-1.21.67-2.2 2.35-2.2 3.73v5.65c0 1.38.99 3.06 2.2 3.73l5.34 2.97c1.14.63 3.01.63 4.15 0l5.34-2.97c1.21-.67 2.2-2.35 2.2-3.73V9.17c0-1.38-.99-3.06-2.2-3.73l-5.34-2.97c-1.15-.63-3.01-.63-4.15.01Z"/>
+                                        </svg>
+                                        Products
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
 
@@ -130,6 +142,18 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
                                 </svg>
                                 Categories
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('admin.products.index') }}"
+                                class="{{ request()->routeIs('admin.products.index') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
+                                <svg class="{{ request()->routeIs('admin.products.index') ? 'text-gray-800' : 'text-gray-400 ' }} h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.17 7.44 12 12.55l8.77-5.08M12 21.61v-9.07"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.93 2.48 4.59 5.44c-1.21.67-2.2 2.35-2.2 3.73v5.65c0 1.38.99 3.06 2.2 3.73l5.34 2.97c1.14.63 3.01.63 4.15 0l5.34-2.97c1.21-.67 2.2-2.35 2.2-3.73V9.17c0-1.38-.99-3.06-2.2-3.73l-5.34-2.97c-1.15-.63-3.01-.63-4.15.01Z"/>
+                                </svg>
+                                Products
                             </a>
                         </li>
 
