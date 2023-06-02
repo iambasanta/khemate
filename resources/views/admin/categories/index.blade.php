@@ -32,6 +32,7 @@
                         <tr>
                             <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Category Name</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Visibility</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Product Count</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Created At</th>
                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Actions</th>
                         </tr>
@@ -54,6 +55,8 @@
                                 </svg>
                                 @endif
                             </td>
+
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $category->products->count() }} product(s)</td>
 
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $category->formatted_created_at }}</td>
 

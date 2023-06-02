@@ -20,4 +20,8 @@ class Category extends Model
     public function getFormattedCreatedAtAttribute() {
         return Carbon::parse($this->created_at)->format('F j, Y');
     }
+
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
 }
