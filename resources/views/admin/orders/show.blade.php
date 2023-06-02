@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div class="max-w-xl">
             <p class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Order details</p>
-            <p class="mt-2 text-base text-gray-500">Order id #14034056</p>
+            <p class="mt-2 text-base text-gray-500">Order id #{{ $order->number }}</p>
 
             <dl class="mt-4 text-sm font-medium">
                 <a href="{{ route('admin.orders.index') }}" class="inline-flex item-center text-sm font-semibold leading-6 text-gray-900">
@@ -117,7 +117,7 @@
                 <dl class="space-y-6 border-t border-gray-200 pt-10 text-sm">
                     <div class="flex justify-between">
                         <dt class="font-medium text-gray-900">Subtotal</dt>
-                        <dd class="text-gray-700">$36.00</dd>
+                        <dd class="text-gray-700">${{ $order->total_price }}</dd>
                     </div>
                     <div class="flex justify-between">
                         <dt class="flex font-medium text-gray-900">

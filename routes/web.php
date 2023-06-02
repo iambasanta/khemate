@@ -29,7 +29,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('products', ProductController::class);
 
         Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
-        Route::get('orders/detail', [OrderController::class, 'show'])->name('orders.show');
+        Route::get('orders/{order}', [OrderController::class, 'show'])->name('orders.show');
     });
 });
 

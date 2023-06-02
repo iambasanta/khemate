@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,4 +25,7 @@ class Order extends Model
         'status',
     ];
 
+    public function getFormattedCreatedAtAttribute() {
+        return Carbon::parse($this->created_at)->format('F j, Y');
+    }
 }
