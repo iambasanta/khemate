@@ -30,7 +30,64 @@
                             <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">theo@email.com</td>
                             <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">$4,397.00</td>
                             <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
-                                <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Delivered</span>
+                                <span class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-semibold leading-5 text-gray-800">new</span>
+                            </td>
+
+                            <td class="flex space-x-6 px-3 py-4">
+                                <a href="{{ route('admin.orders.show') }}" class="inline-flex text-gray-600 hover:text-gray-800">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-0">AAPS0L</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">04/05/2023</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-900">Theo Man</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">theo@email.com</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">$4,397.00</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
+                                <span class="inline-flex rounded-full bg-yellow-100 px-2 text-xs font-semibold leading-5 text-yellow-800">processing</span>
+                            </td>
+
+                            <td class="flex space-x-6 px-3 py-4">
+                                <a href="{{ route('admin.orders.show') }}" class="inline-flex text-gray-600 hover:text-gray-800">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-0">AAPS0L</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">04/05/2023</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-900">Theo Man</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">theo@email.com</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">$4,397.00</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
+                                <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">delivered</span>
+                            </td>
+
+                            <td class="flex space-x-6 px-3 py-4">
+                                <a href="{{ route('admin.orders.show') }}" class="inline-flex text-gray-600 hover:text-gray-800">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-0">AAPS0L</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">04/05/2023</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-900">Theo Man</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">theo@email.com</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">$4,397.00</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
+                                <span class="inline-flex rounded-full bg-red-100 px-2 text-xs font-semibold leading-5 text-red-800">cancelled</span>
                             </td>
 
                             <td class="flex space-x-6 px-3 py-4">
