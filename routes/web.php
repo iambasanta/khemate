@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
         Route::get('orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+
+        Route::get('payments', [PaymentController::class, 'index'])->name('payments.index');
     });
 });
 
