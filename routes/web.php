@@ -26,6 +26,8 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['middleware' => ['auth']], function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
+        Route::get('profile', [ProfileController::class, 'profile'])->name('profile.edit');
+
         Route::resource('categories', CategoryController::class);
         Route::resource('products', ProductController::class);
 

@@ -95,12 +95,11 @@
                         <li>
                             <div class="text-xs font-semibold leading-6 text-gray-400">Your actions</div>
                             <ul role="list" class="-mx-2 mt-2 space-y-1">
-
                                 <li>
-                                    <a href=""
-                                        class=""
+                                    <a href="{{ route('admin.profile.edit') }}"
+                                        class="{{ request()->routeIs('admin.profile.edit') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                         x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
-                                        <svg class="text-gray-400 h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <svg class="{{ request()->routeIs('admin.profile.edit') ? 'text-gray-800' : 'text-gray-400 ' }} h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 2H9C4 2 2 4 2 9v6c0 3.78 1.14 5.85 3.86 6.62.22-2.6 2.89-4.65 6.14-4.65 3.25 0 5.92 2.05 6.14 4.65C20.86 20.85 22 18.78 22 15V9c0-5-2-7-7-7Zm-3 12.17c-1.98 0-3.58-1.61-3.58-3.59C8.42 8.6 10.02 7 12 7s3.58 1.6 3.58 3.58-1.6 3.59-3.58 3.59Z"/>
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.58 10.58c0 1.98-1.6 3.59-3.58 3.59s-3.58-1.61-3.58-3.59C8.42 8.6 10.02 7 12 7s3.58 1.6 3.58 3.58Z"/>
                                         </svg>
@@ -109,9 +108,10 @@
                                 </li>
 
                                 <li>
-                                    <form method="POST" action="">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
 
-                                        <a href=""
+                                        <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); this.closest('form').submit();"
                                             class="text-gray-700 hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                             x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
@@ -122,8 +122,8 @@
                                         </a>
                                     </form>
                                 </li>
-
                             </ul>
+
                         </li>
                     </ul>
                 </nav>
@@ -214,11 +214,11 @@
                 <li>
                     <div class="text-xs font-semibold leading-6 text-gray-400">Your actions</div>
                     <ul role="list" class="-mx-2 mt-2 space-y-1">
-                        <li>
-                            <a href=""
-                                class="text-gray-700 hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                         <li>
+                            <a href="{{ route('admin.profile.edit') }}"
+                                class="{{ request()->routeIs('admin.profile.edit') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                 x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
-                                <svg class="text-gray-400 h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <svg class="{{ request()->routeIs('admin.profile.edit') ? 'text-gray-800' : 'text-gray-400 ' }} h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.14 21.62c-.88.26-1.92.38-3.14.38H9c-1.22 0-2.26-.12-3.14-.38.22-2.6 2.89-4.65 6.14-4.65 3.25 0 5.92 2.05 6.14 4.65Z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 2H9C4 2 2 4 2 9v6c0 3.78 1.14 5.85 3.86 6.62.22-2.6 2.89-4.65 6.14-4.65 3.25 0 5.92 2.05 6.14 4.65C20.86 20.85 22 18.78 22 15V9c0-5-2-7-7-7Zm-3 12.17c-1.98 0-3.58-1.61-3.58-3.59C8.42 8.6 10.02 7 12 7s3.58 1.6 3.58 3.58-1.6 3.59-3.58 3.59Z"/>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.58 10.58c0 1.98-1.6 3.59-3.58 3.59s-3.58-1.61-3.58-3.59C8.42 8.6 10.02 7 12 7s3.58 1.6 3.58 3.58Z"/>
@@ -228,8 +228,10 @@
                         </li>
 
                         <li>
-                            <form method="POST" action="">
-                                <a href=""
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); this.closest('form').submit();"
                                     class="text-gray-700 hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                     x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
@@ -240,7 +242,6 @@
                                 </a>
                             </form>
                         </li>
-
                     </ul>
                 </li>
             </ul>
