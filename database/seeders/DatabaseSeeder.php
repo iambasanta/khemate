@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Order;
+use App\Models\OrderItem;
 use App\Models\Payment;
 use App\Models\Product;
 use App\Models\User;
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
         Product::factory(20)->create();
         Order::factory(10)->create();
         Payment::factory(10)->create();
+        OrderItem::factory(10)->create();
 
         User::factory()->create([
             'name' => 'Admin',

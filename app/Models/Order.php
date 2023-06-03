@@ -36,4 +36,9 @@ class Order extends Model
     public function payment() {
         return $this->hasOne(Payment::class);
     }
+
+    public function products() {
+        return $this->belongsToMany(Product::class, 'order_items')
+                    ->withPivot('quantity', 'unit_price');
+    }
 }

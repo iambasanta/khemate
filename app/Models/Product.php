@@ -30,4 +30,9 @@ class Product extends Model
         return $this->image ? Storage::disk('products')->url($this->image) : '';
     }
 
+    public function orders() {
+        return $this->belongsToMany(Order::class, 'order_items')
+                    ->withPivot('quantity', 'unit_price');
+    }
+
 }
