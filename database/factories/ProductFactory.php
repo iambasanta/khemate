@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Product>
@@ -18,11 +19,12 @@ class ProductFactory extends Factory
     public function definition(): array
     {
         $categoryId = Category::pluck('id')->random();
+        $name = fake()->name();
 
         return [
             'category_id' => $categoryId,
-            'name' => fake()->name(),
-            'slug' => fake()->unique()->slug(),
+            'name' => $name,
+            'slug' => Str::slug($name),
             'description' => fake()->paragraph(),
             'featured' => fake()->boolean(),
             'image' => fake()->imageUrl(),
