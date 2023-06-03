@@ -65,8 +65,8 @@
                         <dt class="font-medium text-gray-900">Customer Details</dt>
                         <dd class="mt-2 text-gray-700">
                             <address class="not-italic">
-                                <span class="block">John Doe</span>
-                                <span class="block">johndoe@email.com</span>
+                                <span class="block">{{ $order->user->name }}</span>
+                                <span class="block">{{ $order->user->email }}</span>
                                 <span class="block">9876543210</span>
                             </address>
                         </dd>
