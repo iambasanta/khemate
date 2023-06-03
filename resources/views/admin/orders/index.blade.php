@@ -34,8 +34,8 @@
                         <tr>
                             <td class="whitespace-nowrap py-2 pl-4 pr-3 text-sm text-gray-500 sm:pl-0">{{ $order->number }}</td>
                             <td class="whitespace-nowrap px-2 py-2 text-sm font-medium text-gray-900">{{ $order->formatted_created_at }}</td>
-                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-900">Theo Man</td>
-                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">theo@email.com</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-900">{{ $order->user->name }}</td>
+                            <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">{{ $order->user->email }}</td>
                             <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">${{ $order->total_price }}</td>
                             <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
                                 <span class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-semibold leading-5 text-gray-800">{{ $order->status }}</span>

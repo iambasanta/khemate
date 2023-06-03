@@ -28,4 +28,8 @@ class Order extends Model
     public function getFormattedCreatedAtAttribute() {
         return Carbon::parse($this->created_at)->format('F j, Y');
     }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }
