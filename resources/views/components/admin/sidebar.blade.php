@@ -64,6 +64,17 @@
                                 </li>
 
                                 <li>
+                                    <a href="{{ route('admin.customers.index') }}"
+                                        class="{{ request()->routeIs('admin.customers.index') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                        x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
+                                        <svg class="{{ request()->routeIs('admin.customers.index') ? 'text-gray-800' : 'text-gray-400 ' }} h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                        </svg>
+                                        Customers
+                                    </a>
+                                </li>
+
+                                <li>
                                     <a href="{{ route('admin.orders.index') }}"
                                         class="{{ request()->routeIs('admin.orders.index') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                         x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
@@ -180,6 +191,17 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.93 2.48 4.59 5.44c-1.21.67-2.2 2.35-2.2 3.73v5.65c0 1.38.99 3.06 2.2 3.73l5.34 2.97c1.14.63 3.01.63 4.15 0l5.34-2.97c1.21-.67 2.2-2.35 2.2-3.73V9.17c0-1.38-.99-3.06-2.2-3.73l-5.34-2.97c-1.15-.63-3.01-.63-4.15.01Z"/>
                                 </svg>
                                 Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('admin.customers.index') }}"
+                                class="{{ request()->routeIs('admin.customers.index') ? 'text-gray-800 bg-gray-100' : 'text-gray-700 ' }} hover:text-gray-800 hover:bg-gray-100 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                                x-state-description="undefined: &quot;bg-gray-100 text-gray-800&quot;, undefined: &quot;text-gray-700 hover:text-gray-800 hover:bg-gray-100&quot;">
+                                <svg class="{{ request()->routeIs('admin.customers.index') ? 'text-gray-800' : 'text-gray-400 ' }} h-6 w-6 shrink-0 group-hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                                </svg>
+                                Customers
                             </a>
                         </li>
 
