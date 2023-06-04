@@ -27,7 +27,7 @@ class Product extends Model
     }
 
     public function imageUrl() {
-        return $this->image ? Storage::disk('products')->url($this->image) : '';
+        return $this->image ? Storage::disk('products')->url($this->image) : asset('assets/image-not-available.png');
     }
 
     public function orders() {
