@@ -29,7 +29,7 @@ class StoreProductRequest extends FormRequest
             'description' => ['sometimes'],
             'featured' => ['sometimes'],
             'image' => ['sometimes', 'image', 'mimes:jpg,jpeg,png'],
-            'price' => ['required', 'integer', 'min:0'],
+            'price' => ['required', 'decimal:2, 4', 'min:0'],
             'quantity' => ['required', 'integer', 'min:0'],
         ];
     }
