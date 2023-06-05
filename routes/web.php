@@ -26,8 +26,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomePageController::class, 'index'])->name('home');
 Route::get('collections', [CollectionController::class, 'index'])->name('collections');
-Route::get('collections/category', [CollectionController::class, 'products'])->name('collections.products');
-Route::get('collections/category/product', [CollectionController::class, 'show'])->name('collections.products.show');
+Route::get('collections/{category:slug}', [CollectionController::class, 'products'])->name('collections.products');
+Route::get('collections/{category:slug}/{product:slug}', [CollectionController::class, 'show'])->name('product.show');
 Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
 

@@ -12,14 +12,14 @@
                             <h3 class="text-sm font-medium text-gray-900">Products</h3>
                             <ul role="list" class="mt-6 space-y-6">
                                 <li class="text-sm">
-                                    <a href="#" class="text-gray-500 hover:text-gray-600">Clothing</a>
+                                    <a href="{{ route('collections.products', 'clothing') }}" class="text-gray-500 hover:text-gray-600">Clothing</a>
                                 </li>
                                 <li class="text-sm">
-                                    <a href="#" class="text-gray-500 hover:text-gray-600">Shoes</a>
+                                    <a href="{{ route('collections.products', 'shoes') }}" class="text-gray-500 hover:text-gray-600">Shoes</a>
                                 </li>
                                 <li class="text-sm">
                                 <li class="text-sm">
-                                    <a href="#" class="text-gray-500 hover:text-gray-600">Accessories</a>
+                                    <a href="{{ route('collections.products', 'accessories') }}" class="text-gray-500 hover:text-gray-600">Accessories</a>
                                 </li>
                             </ul>
                         </div>

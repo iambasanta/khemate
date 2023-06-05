@@ -6,8 +6,10 @@
         <div class="mt-10 flow-root">
             <div class="-my-2">
                 <div class="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
-                    <div class="min-w-screen-xl absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
-                        <a href="#" class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
+                    <div
+                        class="min-w-screen-xl absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+                        <a href="{{ route('collections') }}"
+                            class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                             <span aria-hidden="true" class="absolute inset-0">
                                 <img src="{{ asset('assets/images/category-new-arrival.jpg') }}" alt=""
                                     class="h-full w-full object-cover object-center">
@@ -16,7 +18,8 @@
                                 class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                             <span class="relative mt-auto text-center text-xl font-bold text-white">New Arrivals</span>
                         </a>
-                        <a href="#" class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
+                        <a href="{{ route('collections.products', 'clothing') }}"
+                            class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                             <span aria-hidden="true" class="absolute inset-0">
                                 <img src="{{ asset('assets/images/category-clothing.jpg') }}" alt=""
                                     class="h-full w-full object-cover object-center">
@@ -25,7 +28,8 @@
                                 class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                             <span class="relative mt-auto text-center text-xl font-bold text-white">Clothing</span>
                         </a>
-                        <a href="#" class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
+                        <a href="{{ route('collections.products', 'shoes') }}"
+                            class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                             <span aria-hidden="true" class="absolute inset-0">
                                 <img src="{{ asset('assets/images/category-shoes.jpg') }}" alt=""
                                     class="h-full w-full object-cover object-center">
@@ -34,7 +38,8 @@
                                 class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                             <span class="relative mt-auto text-center text-xl font-bold text-white">Shoes</span>
                         </a>
-                        <a href="#" class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
+                        <a href="{{ route('collections.products', 'accessories') }}"
+                            class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                             <span aria-hidden="true" class="absolute inset-0">
                                 <img src="{{ asset('assets/images/category-accessories.jpg') }}" alt=""
                                     class="h-full w-full object-cover object-center">
@@ -43,7 +48,8 @@
                                 class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                             <span class="relative mt-auto text-center text-xl font-bold text-white">Accessories</span>
                         </a>
-                        <a href="#" class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
+                        <a href="{{ route('collections') }}"
+                            class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                             <span aria-hidden="true" class="absolute inset-0">
                                 <img src="{{ asset('assets/images/category-sale.jpg') }}" alt=""
                                     class="h-full w-full object-cover object-center">

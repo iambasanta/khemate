@@ -56,7 +56,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="inline-block rounded-md border border-transparent bg-gray-600 px-8 py-3 text-center font-medium text-white hover:bg-gray-700">Shop Collection</a>
+                        <a href="{{ route('collections') }}" class="inline-block rounded-md border border-transparent bg-gray-600 px-8 py-3 text-center font-medium text-white hover:bg-gray-700">Shop Collection</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
         <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div class="sm:flex sm:items-baseline sm:justify-between">
                 <h2 id="category-heading" class="text-2xl font-bold tracking-tight text-gray-900">Shop by Category</h2>
-                <a href="#" class="hidden text-sm font-semibold text-gray-600 hover:text-gray-500 sm:block">
+                <a href="{{ route('collections') }}" class="hidden text-sm font-semibold text-gray-600 hover:text-gray-500 sm:block">
                     Browse all categories
                     <span aria-hidden="true"> →</span>
                 </a>
@@ -78,7 +78,7 @@
                     <div class="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
                         <div
                             class="min-w-screen-xl absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
-                            <a href="#"
+                            <a href="{{ route('collections') }}"
                                 class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                                 <span aria-hidden="true" class="absolute inset-0">
                                     <img src="{{ asset('assets/images/category-new-arrival.jpg') }}" alt=""
@@ -88,7 +88,7 @@
                                     class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                                 <span class="relative mt-auto text-center text-xl font-bold text-white">New Arrivals</span>
                             </a>
-                            <a href="#"
+                            <a href="{{ route('collections.products', 'clothing') }}"
                                 class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                                 <span aria-hidden="true" class="absolute inset-0">
                                     <img src="{{ asset('assets/images/category-clothing.jpg') }}" alt=""
@@ -98,7 +98,7 @@
                                     class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                                 <span class="relative mt-auto text-center text-xl font-bold text-white">Clothing</span>
                             </a>
-                            <a href="#"
+                            <a href="{{ route('collections.products', 'shoes') }}"
                                 class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                                 <span aria-hidden="true" class="absolute inset-0">
                                     <img src="{{ asset('assets/images/category-shoes.jpg') }}" alt=""
@@ -108,7 +108,7 @@
                                     class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                                 <span class="relative mt-auto text-center text-xl font-bold text-white">Shoes</span>
                             </a>
-                            <a href="#"
+                            <a href="{{ route('collections.products', 'accessories') }}"
                                 class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                                 <span aria-hidden="true" class="absolute inset-0">
                                     <img src="{{ asset('assets/images/category-accessories.jpg') }}" alt=""
@@ -118,7 +118,7 @@
                                     class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"></span>
                                 <span class="relative mt-auto text-center text-xl font-bold text-white">Accessories</span>
                             </a>
-                            <a href="#"
+                            <a href="{{ route('collections') }}"
                                 class="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto">
                                 <span aria-hidden="true" class="absolute inset-0">
                                     <img src="{{ asset('assets/images/category-sale.jpg') }}" alt=""
@@ -164,74 +164,39 @@
     <!-- Featured products section -->
     <section aria-labelledby="trending-heading">
         <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8 lg:pt-32">
-          <div class="md:flex md:items-center md:justify-between">
-            <h2 id="favorites-heading" class="text-2xl font-bold tracking-tight text-gray-900">Featured Products</h2>
-            <a href="#" class="hidden text-sm font-medium text-gray-600 hover:text-gray-500 md:block">
-              Shop the collection
-              <span aria-hidden="true"> →</span>
-            </a>
-          </div>
+            <div class="md:flex md:items-center md:justify-between">
+                <h2 id="favorites-heading" class="text-2xl font-bold tracking-tight text-gray-900">Featured Products</h2>
+                <a href="{{ route('collections') }}" class="hidden text-sm font-medium text-gray-600 hover:text-gray-500 md:block">
+                    Shop the collection
+                    <span aria-hidden="true"> →</span>
+                </a>
+            </div>
 
-          <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
-            <div class="group relative">
-                <div class="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                  <img src="{{ asset('assets/images/product-01.jpg') }}" alt="Hand stitched, orange leather long wallet." class="h-full w-full object-cover object-center">
+            <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
+            @foreach( $products as $product )
+                <div class="group relative">
+                    <div class="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
+                        <img src="{{ $product->image }}" alt="Product image" class="h-full w-full object-cover object-center">
+                    </div>
+                    <h3 class="mt-4 text-sm text-gray-700">
+                        <a href="{{ route('product.show', [$product->category, $product]) }}">
+                            <span class="absolute inset-0"></span>
+                            {{ $product->name }}
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">${{ $product->price }}</p>
                 </div>
-                <h3 class="mt-4 text-sm text-gray-700">
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Basic tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm font-medium text-gray-900">$75</p>
-              </div>
-            <div class="group relative">
-                <div class="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                  <img src="{{ asset('assets/images/product-02.jpg') }}" alt="12-sided, machined black pencil and pen." class="h-full w-full object-cover object-center">
-                </div>
-                <h3 class="mt-4 text-sm text-gray-700">
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Plain tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm font-medium text-gray-900">$70</p>
-              </div>
-            <div class="group relative">
-                <div class="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                  <img src="{{ asset('assets/images/product-03.jpg') }}" alt="Set of three light and dark brown mini sketch books." class="h-full w-full object-cover object-center">
-                </div>
-                <h3 class="mt-4 text-sm text-gray-700">
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Drop shoulder tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm font-medium text-gray-900">$27</p>
-              </div>
-            <div class="group relative">
-                <div class="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                  <img src="{{ asset('assets/images/product-04.jpg') }}" alt="Beautiful walnut organizer set with multiple white compartments" class="h-full w-full object-cover object-center">
-                </div>
-                <h3 class="mt-4 text-sm text-gray-700">
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Fit tee
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm font-medium text-gray-900">$149</p>
-              </div>
+            @endforeach
+            </div>
 
-          </div>
-
-          <div class="mt-8 text-sm md:hidden">
-            <a href="#" class="font-medium text-gray-600 hover:text-gray-500">
-              Shop the collection
-              <span aria-hidden="true"> →</span>
-            </a>
-          </div>
+            <div class="mt-8 text-sm md:hidden">
+                <a href="{{ route('collections') }}" class="font-medium text-gray-600 hover:text-gray-500">
+                    Shop the collection
+                    <span aria-hidden="true"> →</span>
+                </a>
+            </div>
         </div>
-      </section>
+    </section>
 
     <!-- CTA section -->
     <section aria-labelledby="sale-heading">
@@ -246,7 +211,7 @@
                                     Up to 50% off.
                             </h2>
                             <div class="mt-6 text-base">
-                                <a href="#" class="font-semibold text-white">
+                                <a href="{{ route('collections') }}" class="font-semibold text-white">
                                     Shop the sale
                                     <span aria-hidden="true"> →</span>
                                 </a>

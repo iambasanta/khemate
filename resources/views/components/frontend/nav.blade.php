@@ -31,7 +31,7 @@
                                 <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                     <img src="{{ asset('assets/images/category-new-arrival.jpg') }}" alt="Hats and sweaters on wood shelves next to various colors of t-shirts on hangers." class="object-cover object-center">
                                 </div>
-                                <a href="#" class="mt-6 block text-sm font-medium text-gray-900">
+                                <a href="{{ route('collections') }}" class="mt-6 block text-sm font-medium text-gray-900">
                                     <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                     New Arrivals
                                 </a>
@@ -39,9 +39,9 @@
                             </div>
                             <div class="group relative">
                                 <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                    <img src="{{ asset('assets/images/category-clothing.jpg') }}" alt="Model wearing light heather gray t-shirt." class="object-cover object-center">
+                                    <img src="{{ asset('assets/images/category-clothing.jpg') }}" alt="Model putting folded cash into slim card holder olive leather wallet with hand stitching." class="object-cover object-center">
                                 </div>
-                                <a href="#" class="mt-6 block text-sm font-medium text-gray-900">
+                                <a href="{{ route('collections.products', 'clothing') }}" class="mt-6 block text-sm font-medium text-gray-900">
                                     <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                     Clothing
                                 </a>
@@ -51,7 +51,7 @@
                                 <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                     <img src="{{ asset('assets/images/category-shoes.jpg') }}" alt="Model putting folded cash into slim card holder olive leather wallet with hand stitching." class="object-cover object-center">
                                 </div>
-                                <a href="#" class="mt-6 block text-sm font-medium text-gray-900">
+                                <a href="{{ route('collections.products', 'shoes') }}" class="mt-6 block text-sm font-medium text-gray-900">
                                     <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                     Shoes
                                 </a>
@@ -61,7 +61,7 @@
                                 <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                     <img src="{{ asset('assets/images/category-accessories.jpg') }}" alt="Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body." class="object-cover object-center">
                                 </div>
-                                <a href="#" class="mt-6 block text-sm font-medium text-gray-900">
+                                <a href="{{ route('collections.products', 'accessories') }}" class="mt-6 block text-sm font-medium text-gray-900">
                                     <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                     Accessories
                                 </a>
@@ -77,8 +77,13 @@
                     <div class="flow-root">
                         <a href="#" class="-m-2 block p-2 font-medium text-gray-900">About</a>
                     </div>
+
                     <div class="flow-root">
                         <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Contact</a>
+                    </div>
+
+                    <div class="flow-root">
+                        <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Help</a>
                     </div>
 
                 </div>
@@ -106,7 +111,7 @@
                     <div class="flex h-16 items-center justify-between">
                         <!-- Logo (lg+) -->
                         <div class="hidden lg:flex lg:flex-1 lg:items-center">
-                            <a href="#">
+                            <a href="/">
                                 <span class="sr-only">Your Company</span>
                                 <x-application-logo/>
                             </a>
@@ -140,7 +145,7 @@
                                                             <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                                                 <img src="{{ asset('assets/images/category-new-arrival.jpg') }}" alt="Hats and sweaters on wood shelves next to various colors of t-shirts on hangers." class="object-cover object-center">
                                                             </div>
-                                                            <a href="#" class="mt-4 block font-medium text-gray-900">
+                                                            <a href="{{ route('collections') }}" class="mt-4 block font-medium text-gray-900">
                                                                 <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                                                 New Arrivals
                                                             </a>
@@ -150,7 +155,7 @@
                                                             <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                                                 <img src="{{ asset('assets/images/category-clothing.jpg') }}" alt="Model wearing light heather gray t-shirt." class="object-cover object-center">
                                                             </div>
-                                                            <a href="#" class="mt-4 block font-medium text-gray-900">
+                                                            <a href="{{ route('collections.products', 'clothing') }}" class="mt-4 block font-medium text-gray-900">
                                                                 <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                                                 Clothing
                                                             </a>
@@ -160,7 +165,7 @@
                                                             <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                                                 <img src="{{ asset('assets/images/category-shoes.jpg') }}" alt="Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body." class="object-cover object-center">
                                                             </div>
-                                                            <a href="#" class="mt-4 block font-medium text-gray-900">
+                                                            <a href="{{ route('collections.products', 'shoes') }}" class="mt-4 block font-medium text-gray-900">
                                                                 <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                                                 Shoes
                                                             </a>
@@ -170,7 +175,7 @@
                                                             <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                                                 <img src="{{ asset('assets/images/category-accessories.jpg') }}" alt="Model putting folded cash into slim card holder olive leather wallet with hand stitching." class="object-cover object-center">
                                                             </div>
-                                                            <a href="#" class="mt-4 block font-medium text-gray-900">
+                                                            <a href="{{ route('collections.products', 'accessories') }}" class="mt-4 block font-medium text-gray-900">
                                                                 <span class="absolute inset-0 z-10" aria-hidden="true"></span>
                                                                 Accessories
                                                             </a>
@@ -186,6 +191,7 @@
 
                                     <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">About</a>
                                     <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Contact</a>
+                                    <a href="#" class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Help</a>
 
                                 </div>
                             </div>
@@ -203,7 +209,7 @@
                         </div>
 
                         <!-- Logo (lg-) -->
-                        <a href="#" class="lg:hidden">
+                        <a href="/" class="lg:hidden">
                             <span class="sr-only">Your Company</span>
                             <x-application-logo/>
                         </a>
