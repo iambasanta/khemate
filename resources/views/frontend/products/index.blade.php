@@ -5,7 +5,7 @@
     </div>
 
     <section class="mx-auto max-w-2xl px-4 lg:max-w-7xl lg:px-8">
-        <livewire:frontend.products.index :products="$products" />
+        <livewire:frontend.products.index :category="$category" :products="$products" />
     </section>
 
 </x-frontend.app>

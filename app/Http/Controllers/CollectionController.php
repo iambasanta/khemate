@@ -13,6 +13,13 @@ class CollectionController extends Controller
 
     public function products(Category $category) {
         $products = $category->products()->get();
+
+        if (request()->sort === 'low-to-high') {
+            $products = $products->sortBy('price');
+        }elseif (request()->sort === 'high-to-low') {
+            $products = $products->sortByDesc('price');
+        }
+
         return view('frontend.products.index',compact('category', 'products'));
     }
 }
