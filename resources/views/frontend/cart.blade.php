@@ -58,14 +58,18 @@
                     <dl class="space-y-4">
                         <div class="flex items-center justify-between">
                             <dt class="text-base font-medium text-gray-900">Subtotal</dt>
-                            <dd class="ml-4 text-base font-medium text-gray-900">$96.00</dd>
+                            <dd class="ml-4 text-base font-medium text-gray-900">${{ Cart::total() }}</dd>
                         </div>
                     </dl>
                     <p class="mt-1 text-sm text-gray-500">Shipping and taxes will be calculated at checkout.</p>
                 </div>
 
                 <div class="mt-10">
-                    <button type="submit" class="w-full rounded-md border border-transparent bg-gray-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-50">Checkout</button>
+                    <a href="{{ route('checkout.index') }}">
+                        <button class="w-full rounded-md border border-transparent bg-gray-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+                            Checkout
+                        </button>
+                    </a>
                 </div>
 
                 <div class="mt-6 text-center text-sm">

@@ -35,7 +35,7 @@ Route::get('cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('cart', [CartController::class, 'store'])->name('cart.store');
 Route::delete('cart/{product}', [CartController::class, 'destroy'])->name('cart.destroy');
 
-Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
+Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['middleware' => ['auth']], function () {
