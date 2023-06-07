@@ -88,7 +88,8 @@
                     </div>
                 </div>
 
-                <form class="mt-10">
+                <form action="{{ route('cart.store') }}" method="POST" class="mt-10">
+                    @csrf
                     <!-- Colors -->
                     <div>
                         <h3 class="text-sm font-medium text-gray-900">Color</h3>
@@ -175,7 +176,9 @@
                         </fieldset>
                     </div>
 
-                    <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-600 px-8 py-3 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">Add to bag</button>
+                    <input type="hidden" name="product_id" value="{{ $product->id }}" />
+
+                    <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-600 px-8 py-3 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">Add to cart</button>
                 </form>
             </div>
 
@@ -226,7 +229,7 @@
                         <div class="mt-4 flex justify-between">
                             <div>
                                 <h3 class="text-sm text-gray-700">
-                                    <a href="#">
+                                    <a href="{{ route('product.show', [$product->category, $product]) }}">
                                         <span aria-hidden="true" class="absolute inset-0"></span>
                                         {{ $product->name }}
                                     </a>

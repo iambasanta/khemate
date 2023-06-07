@@ -26,10 +26,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomePageController::class, 'index'])->name('home');
+
 Route::get('collections', [CollectionController::class, 'index'])->name('collections');
 Route::get('collections/{category:slug}', [CollectionController::class, 'products'])->name('collections.products');
 Route::get('collections/{category:slug}/{product:slug}', [ProductPageController::class, 'show'])->name('product.show');
-Route::get('cart', [CartController::class, 'index'])->name('cart');
+
+Route::get('cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('cart', [CartController::class, 'store'])->name('cart.store');
+Route::delete('cart/{product}', [CartController::class, 'destroy'])->name('cart.destroy');
+
 Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout');
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {

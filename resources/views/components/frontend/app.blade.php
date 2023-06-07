@@ -62,6 +62,8 @@
         </main>
     </div>
 
+    <x-notify />
+
     <x-frontend.footer/>
 </x-frontend.layout>
 
