@@ -37,10 +37,6 @@ Route::delete('cart/{product}', [CartController::class, 'destroy'])->name('cart.
 
 Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -50,7 +46,6 @@ Route::middleware('auth')->group(function () {
     Route::get('checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
     Route::get('checkout/failure', [CheckoutController::class, 'failure'])->name('checkout.failure');
 });
-
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::group(['middleware' => ['auth']], function () {
