@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Order::class);
+            $table->string('session_id')->nullable();
             $table->enum('status', ['unpaid', 'pending', 'paid'])->default('unpaid');
             $table->string('method');
             $table->timestamps();

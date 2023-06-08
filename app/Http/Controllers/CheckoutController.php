@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\OrderStatus;
+use App\Enums\PaymentStatus;
+use App\Models\Order;
+use App\Models\Payment;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
-use Stripe\Stripe;
 use Stripe\StripeClient;
 
 class CheckoutController extends Controller
@@ -20,8 +23,11 @@ class CheckoutController extends Controller
         $cartItems = Cart::content();
 
         $lineItems = [];
+        $totalPrice = 0;
 
         foreach ($cartItems as $cartItem) {
+            $totalPrice += $cartItem->price;
+
             $lineItems[] = [
                 'price_data' => [
                     'currency' => 'usd',
@@ -38,31 +44,61 @@ class CheckoutController extends Controller
             'line_items' => $lineItems,
             'mode' => 'payment',
             'success_url' => route('checkout.success', [], true).'?session_id={CHECKOUT_SESSION_ID}',
-            'cancel_url' => route('checkout.cancel', [], true),
+            'cancel_url' => route('checkout.failure', [], true),
         ]);
 
+        $order = Order::create([
+            'user_id' => auth()->user()->id,
+            'status' => OrderStatus::NEW,
+            'total_price' => $totalPrice,
+        ]);
+
+        Payment::create([
+            'order_id' => $order->id,
+            'session_id' => $checkoutSession->id,
+            'status' => PaymentStatus::PENDING,
+            'method' => 'Paid via stripe'
+        ]);
 
         return redirect($checkoutSession->url);
 
     }
 
-    public function success(Request $request) {
+    public function success() {
+        $stripe = new StripeClient(config('stripe.sk'));
+
         try {
-            $stripe = new \Stripe\StripeClient(config('stripe.sk'));
-            $session = $stripe->checkout->sessions->retrieve($request->get('session_id'));
+            $session = $stripe->checkout->sessions->retrieve($_GET['session_id']);
 
             if(!$session) {
                 return view('frontend.checkout.failure');
             }
+
+            $payment = Payment::where(['session_id' =>  $session->id, 'status'=> PaymentStatus::PENDING])->first();
+
+            if (!$payment) {
+                return view('frontend.checkout.failure');
+            }
+
+            $payment->update([
+                'status' => PaymentStatus::PAID,
+            ]);
+
+            $order = $payment->order->update([
+                'status' => OrderStatus::PROCESSING,
+            ]);
+
+            Cart::destroy();
+
             $customer = $stripe->customers->retrieve($session->customer);
 
-            return view('frontend.checkout.success', compact('customer'))->with('success', 'Payment successful!');
+            return view('frontend.checkout.success', compact('customer'));
         } catch (\Exception $e) {
             return view('frontend.checkout.failure');
         }
     }
 
-    public function cancel() {
-
+    public function failure() {
+        return view('frontend.checkout.failure');
     }
 }
