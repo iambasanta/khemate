@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Enums\OrderStatus;
 use App\Enums\PaymentStatus;
 use App\Models\Order;
+use App\Models\OrderItem;
 use App\Models\Payment;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
@@ -84,9 +85,20 @@ class CheckoutController extends Controller
                 'status' => PaymentStatus::PAID,
             ]);
 
-            $order = $payment->order->update([
+            $order = $payment->order;
+
+            $order->update([
                 'status' => OrderStatus::PROCESSING,
             ]);
+
+            foreach (Cart::content() as $item) {
+                OrderItem::create([
+                    'order_id' => $order->id,
+                    'product_id' => $item->id,
+                    'quantity' => $item->qty,
+                    'unit_price' => $item->price,
+                ]);
+            }
 
             Cart::destroy();
 
