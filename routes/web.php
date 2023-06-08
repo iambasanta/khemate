@@ -48,7 +48,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-    Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['auth', 'can:admin']], function () {
         Route::get('/', [HomeController::class, 'index'])->name('home');
         Route::get('profile', [ProfileController::class, 'profile'])->name('profile.edit');
 
