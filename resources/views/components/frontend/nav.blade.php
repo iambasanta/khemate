@@ -101,6 +101,10 @@
                                     {{ __('Profile') }}
                                 </x-responsive-nav-link>
 
+                                <x-responsive-nav-link :href="route('orders.index')">
+                                    {{ __('My Orders') }}
+                                </x-responsive-nav-link>
+
                                 <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
@@ -269,6 +273,10 @@
                                             <x-slot name="content">
                                                 <x-dropdown-link :href="route('profile.edit')">
                                                     {{ __('Profile') }}
+                                                </x-dropdown-link>
+
+                                                <x-dropdown-link :href="route('orders.index')">
+                                                    {{ __('My orders') }}
                                                 </x-dropdown-link>
 
                                                 <!-- Authentication -->

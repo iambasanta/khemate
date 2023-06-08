@@ -10,6 +10,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\OrderPageController;
 use App\Http\Controllers\ProductPageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -45,6 +46,8 @@ Route::middleware('auth')->group(function () {
     Route::post('checkout', [CheckoutController::class, 'checkout'])->name('checkout.store');
     Route::get('checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
     Route::get('checkout/failure', [CheckoutController::class, 'failure'])->name('checkout.failure');
+
+    Route::get('orders', [OrderPageController::class, 'index'])->name('orders.index');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
