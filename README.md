@@ -89,4 +89,4 @@ on your web-broswer to access the website.
 
 ---
 
-To provide more information about the project's features and future recommendations, a dedicated DETAIL.md file has been created. You can find detailed information about the project by referring to the DETAIL.md file.
+To provide more information about the project's features and future recommendations, a dedicated [DETAIL.md](DETAIL.md) file has been created. You can find detailed information about the project by referring to the [DETAIL.md](DETAIL.md) file.
