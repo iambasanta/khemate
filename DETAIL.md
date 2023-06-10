@@ -2,6 +2,26 @@
 
 This project is a single vendor e-commerce web application developed as part of an academic project. It aims to create a platform for a single vendor to sell products online. The project utilizes the Laravel framework and incorporates essential features required for an e-commerce website.
 
+---
+
+### SCREENSHOTS
+
+<details>
+<summary>Homepage</summary>
+
+![Homepage](public/screenshots/home_page.png)
+
+</details>
+
+<details>
+<summary>Admin Dashboard</summary>
+
+![Admin Dashboard](public/screenshots/admin_dashboard.png)
+
+</details>
+
+---
+
 ## Features
 
 -   User Registration and Authentication
@@ -12,6 +32,7 @@ This project is a single vendor e-commerce web application developed as part of 
 -   Payment integration with stripe
 -   Admin dashboard for category, product, order and user management
 -   Responsive design for multi-device support
+-   Generate invoices
 
 ## Future Recommendations
 
