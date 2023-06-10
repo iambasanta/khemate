@@ -86,3 +86,7 @@ Now you can visit:
 -   http://localhost:8000/admin (admin)
 
 on your web-broswer to access the website.
+
+---
+
+To provide more information about the project's features and future recommendations, a dedicated DETAIL.md file has been created. You can find detailed information about the project by referring to the DETAIL.md file.
