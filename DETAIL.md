@@ -6,7 +6,7 @@ This project is a single vendor e-commerce web application developed as part of 
 
 -   User Registration and Authentication
 -   Updae user's personal information
--   Product catalog with search
+-   Product catalog
 -   Detailed product information
 -   Shopping cart and checkout
 -   Payment integration with stripe
@@ -20,6 +20,7 @@ This project is a single vendor e-commerce web application developed as part of 
 -   [ ] Allow users change their password and delete account
 -   [ ] Add multiple images of product (max: 4)
 -   [ ] Add product colors and sizes
+-   [ ] Implement product search
 -   [ ] Implement product filtering
 -   [ ] Introduce wishlists for users to save their favorite items
 -   [ ] Implement user reviews and ratings for products
