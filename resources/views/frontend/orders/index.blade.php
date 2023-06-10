@@ -53,7 +53,7 @@
                             <tr>
                                 <td class="py-6 pr-8">
                                     <div class="flex items-center">
-                                        <img src="{{ $product->image }}" alt="Detail of mechanical pencil tip with machined black steel shaft and chrome lead tip." class="mr-6 h-16 w-16 rounded object-cover object-center">
+                                        <img src="{{ $product->imageUrl() }}" alt="Detail of mechanical pencil tip with machined black steel shaft and chrome lead tip." class="mr-6 h-16 w-16 rounded object-cover object-center">
                                         <div>
                                             <div class="font-medium text-gray-900">{{ $product->name }}</div>
                                             <div class="mt-1 sm:hidden">${{ $product->price }}</div>

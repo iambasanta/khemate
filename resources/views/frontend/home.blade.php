@@ -176,7 +176,7 @@
             @foreach( $products as $product )
                 <div class="group relative">
                     <div class="h-56 w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-72 xl:h-80">
-                        <img src="{{ $product->image }}" alt="Product image" class="h-full w-full object-cover object-center">
+                        <img src="{{ $product->imageUrl() }}" alt="Product image" class="h-full w-full object-cover object-center">
                     </div>
                     <h3 class="mt-4 text-sm text-gray-700">
                         <a href="{{ route('product.show', [$product->category, $product]) }}">

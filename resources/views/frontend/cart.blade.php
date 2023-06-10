@@ -10,7 +10,7 @@
                     @foreach( Cart::content() as $item )
                     <li class="flex py-6">
                         <div class="flex-shrink-0">
-                            <img src="{{ $item->model->image }}" alt="Front side of sienna cotton t-shirt." class="h-24 w-24 rounded-md object-cover object-center sm:h-32 sm:w-32">
+                            <img src="{{ $item->model->imageUrl() }}" alt="Front side of sienna cotton t-shirt." class="h-24 w-24 rounded-md object-cover object-center sm:h-32 sm:w-32">
                         </div>
 
                         <div class="ml-4 flex flex-1 flex-col sm:ml-6">

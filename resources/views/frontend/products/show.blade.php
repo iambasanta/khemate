@@ -36,18 +36,18 @@
         <!-- Image gallery -->
         <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
             <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
-                <img src="{{ $product->image }}" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+                <img src="{{ $product->imageUrl() }}" alt="Product image" class="h-full w-full object-cover object-center">
             </div>
             <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                 <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                    <img src="{{ $product->image }}" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+                    <img src="{{ $product->imageUrl() }}" alt="Product image" class="h-full w-full object-cover object-center">
                 </div>
                 <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
-                    <img src="{{ $product->image }}" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
+                    <img src="{{ $product->imageUrl() }}" alt="Product image" class="h-full w-full object-cover object-center">
                 </div>
             </div>
             <div class="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-                <img src="{{ $product->image }}" alt="Model wearing plain white basic tee." class="h-full w-full object-cover object-center">
+                <img src="{{ $product->imageUrl() }}" alt="Product image" class="h-full w-full object-cover object-center">
             </div>
         </div>
 
@@ -224,7 +224,7 @@
                     @foreach($alsoPurchased as $product)
                     <div class="group relative">
                         <div class="min-h-80 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                            <img src="{{ $product->image }}" alt="Front of men's Artwork Tee in peach with white and brown dots forming an isometric cube." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                            <img src="{{ $product->imageUrl() }}" alt="Front of men's Artwork Tee in peach with white and brown dots forming an isometric cube." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
                         <div class="mt-4 flex justify-between">
                             <div>

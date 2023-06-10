@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::orderBy('name')->get();
+        $categories = Category::where('is_visible', 1)->orderBy('name')->get();
 
         return view('admin.products.create', compact('categories'));
     }
@@ -55,7 +55,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        $categories = Category::orderBy('name')->get();
+        $categories = Category::where('is_visible', 1)->orderBy('name')->get();
 
         return view('admin.products.edit', compact('categories','product'));
     }
