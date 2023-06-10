@@ -21,13 +21,13 @@ class OrderController extends Controller
     }
 
     public function viewInvoice(Order $order) {
-        return view('admin.orders.invoice', compact('order'));
+        return view('invoice.invoice', compact('order'));
     }
 
     public function downloadInvoice(Order $order) {
         $today = Carbon::now()->format('d-m-Y');
 
-        $pdf =  PDF::loadView('admin.orders.invoice', compact('order'));
+        $pdf =  PDF::loadView('invoice.invoice', compact('order'));
 
         return $pdf->download('invoice-'.$order->id.$today.'.pdf');
     }

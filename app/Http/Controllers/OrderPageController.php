@@ -13,6 +13,6 @@ class OrderPageController extends Controller
     }
 
     public function viewInvoice(Order $order) {
-        return view('frontend.orders.invoice', compact('order'));
+        return view('invoice.invoice', compact('order'));
     }
 }
