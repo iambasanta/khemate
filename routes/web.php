@@ -61,6 +61,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         Route::get('orders', [OrderController::class, 'index'])->name('orders.index');
         Route::get('orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+        Route::get('orders/{order}/invoice', [OrderController::class, 'viewInvoice'])->name('orders.invoice');
+        Route::get('orders/{order}/invoice/download', [OrderController::class, 'downloadInvoice'])->name('orders.invoice.download');
 
         Route::get('payments', [PaymentController::class, 'index'])->name('payments.index');
 
