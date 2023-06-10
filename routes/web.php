@@ -48,6 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::get('checkout/failure', [CheckoutController::class, 'failure'])->name('checkout.failure');
 
     Route::get('orders', [OrderPageController::class, 'index'])->name('orders.index');
+    Route::get('orders/{order}/invoice', [OrderPageController::class, 'viewInvoice'])->name('orders.invoice');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
