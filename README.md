@@ -49,6 +49,7 @@ This project is a single vendor e-commerce web application developed as part of 
 
 ## Future Recommendations
 
+-   [ ] Display analytics in admin dashboard
 -   [ ] Implement authentication (with OAuth) via Facebook, Google, Twitter etc.
 -   [ ] Allow users to upload profile pictures
 -   [ ] Allow users change their password and delete account
