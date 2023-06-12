@@ -3,8 +3,10 @@
 </p>
 
 <p align="center">
-This e-commerce site is developed as a project for the E-Commerce subject, aiming to create a comprehensive e-commerce web application to simulate an online shopping platform.
+This project is a single vendor e-commerce web application developed as part of an academic project. It aims to create a platform for a single vendor to sell products online. The project utilizes the Laravel framework and incorporates essential features required for an e-commerce website.
 </p>
+
+---
 
 ## Technologies used
 
@@ -12,6 +14,57 @@ This e-commerce site is developed as a project for the E-Commerce subject, aimin
 -   **[Tailwind CSS](https://tailwindcss.com/)**
 -   **[Laravel Livewire](https://kirschbaumdevelopment.com)**
 -   **[Alpine.js](https://alpinejs.dev/)**
+
+---
+
+### **SCREENSHOTS**
+
+<details>
+<summary>Homepage</summary>
+
+![Homepage](public/screenshots/home_page.png)
+
+</details>
+
+<details>
+<summary>Admin Dashboard</summary>
+
+![Admin Dashboard](public/screenshots/admin_dashboard.png)
+
+</details>
+
+---
+
+## Features
+
+-   User Registration and Authentication
+-   Updae user's personal information
+-   Product catalog
+-   Detailed product information
+-   Shopping cart and checkout
+-   Payment integration with stripe
+-   Admin dashboard for category, product, order and user management
+-   Responsive design for multi-device support
+-   Generate invoices
+
+## Future Recommendations
+
+-   [ ] Implement authentication (with OAuth) via Facebook, Google, Twitter etc.
+-   [ ] Allow users to upload profile pictures
+-   [ ] Allow users change their password and delete account
+-   [ ] Add multiple images of product (max: 4)
+-   [ ] Add product colors and sizes
+-   [ ] Implement product search
+-   [ ] Implement product filtering
+-   [ ] Introduce wishlists for users to save their favorite items
+-   [ ] Implement user reviews and ratings for products
+-   [ ] Enable discount coupons and promotional offers
+-   [ ] Add order Management and Tracking
+-   [ ] Add social sharing options to facilitate product sharing on social media platforms
+-   [ ] Implement payment via e-sewa or khalti or any other payment method
+-   [ ] Send order confirmation email
+
+---
 
 ## Installation
 
@@ -86,7 +139,3 @@ Now you can visit:
 -   http://localhost:8000/admin (admin)
 
 on your web-broswer to access the website.
-
----
-
-To provide more information about the project's features and future recommendations, a dedicated [DETAIL.md](DETAIL.md) file has been created. You can find detailed information about the project by referring to the [DETAIL.md](DETAIL.md) file.
